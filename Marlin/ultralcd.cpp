@@ -137,11 +137,11 @@ static void menu_action_setting_edit_callback_long5(const char* pstr, unsigned l
     } } while(0)
 
 /** Used variables to keep track of the menu */
-#ifndef REPRAPWORLD_KEYPAD
+#ifdef REPRAPWORLD_KEYPAD
 volatile uint8_t buttons;//Contains the bits of the currently pressed buttons.
-#else
-volatile uint8_t buttons_reprapworld_keypad; // to store the reprapworld_keypad shiftregister values
 #endif
+volatile uint8_t buttons_reprapworld_keypad; // to store the reprapworld_keypad shiftregister values
+
 #ifdef LCD_HAS_SLOW_BUTTONS
 volatile uint8_t slow_buttons;//Contains the bits of the currently pressed buttons.
 #endif

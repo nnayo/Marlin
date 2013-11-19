@@ -6,12 +6,6 @@
 * When selecting the rusian language, a slightly different LCD implementation is used to handle UTF8 characters.
 **/
 
-#ifndef REPRAPWORLD_KEYPAD
-extern volatile uint8_t buttons;  //the last checked buttons in a bit array.
-#else
-extern volatile uint16_t buttons;  //an extended version of the last checked buttons in a bit array.
-#endif
-
 ////////////////////////////////////
 // Setup button and encode mappings for each panel (into 'buttons' variable
 //

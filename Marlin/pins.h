@@ -2173,10 +2173,20 @@
  #define LCD_PINS_D7 33
  
  
+//buttons are directly attached using AUX-2
+#ifdef REPRAPWORLD_KEYPAD
+  #define BTN_EN1 64 // encoder
+  #define BTN_EN2 59 // encoder
+  #define BTN_ENC 63 // enter button
+  #define SHIFT_OUT 17 // shift register
+  #define SHIFT_CLK 63 // shift register
+  #define SHIFT_LD 42 // shift register
+#else
  //buttons are directly attached using keypad
  #define BTN_EN1 61
  #define BTN_EN2 59
  #define BTN_ENC 43 //the click
+#endif
  
  #define BLEN_C 2
  #define BLEN_B 1
